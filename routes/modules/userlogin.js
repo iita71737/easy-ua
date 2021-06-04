@@ -44,7 +44,7 @@ router.post('/', (req, res) => {
 
      if (obj[0]) {
          console.log('suce')
-        res.render('success')
+        res.render('success', { obj : obj[0] } )
      } else {
          console.log('error')
         res.render('index')
