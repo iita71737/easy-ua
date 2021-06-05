@@ -3,10 +3,12 @@ const app = express()
 const port = 3000
 const methodOverride = require('method-override')
 const routes = require('./routes')
+const cookieParser = require('cookie-parser')
 
 const exphbs = require('express-handlebars')
 
 app.use(express.urlencoded({ extended: true }))
+app.use(cookieParser('123456789'))
 
 app.engine('hbs', exphbs({ defaultLayout:'main', extname : '.hbs' }))
 app.set('view engine', 'hbs')

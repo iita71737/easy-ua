@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const users = require('../../public/javascript/user')
+let isLogin = false
 
-router.get('/', ( req, res ) => {
+router.get('/', (req, res) => {
     res.render('index')
 })
 
